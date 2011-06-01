@@ -16,6 +16,8 @@ MiCi depends on Java 1.4+, which most OSes will come with today. You can get a l
 
     java -jar mici.jar -h
 
+You can build the JAR file yourself (see below) or download it from [GitHub](https://github.com/downloads/jacaetevha/MiCi/mici.jar "Pre-built JAR file")
+
 Building
 ========
 
