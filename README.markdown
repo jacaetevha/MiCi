@@ -14,14 +14,16 @@ Usage
 
 MiCi depends on Java 1.4+, which most OSes will come with today. You can get a list of available options by running:
 
-    java -jar mici.jar -h
+    run_mici -h
 
-You can build the JAR file yourself (see below) or download it from [GitHub](https://github.com/downloads/jacaetevha/MiCi/mici.jar "Pre-built JAR file")
+or, on Windows:
+
+    run_mici.bat -h
 
 Building
 ========
 
-Building MiCi's JAR file is simple, just run the `create_jar` script. It doesn't clean up after itself, so you'll have a `MiCi.class` file in your directory after running the script.
+Building MiCi is simple, just run the `create_versioned_app` script (*nix only, unless someone else will submit a Windows batch file for this).
 
 
 Contributing

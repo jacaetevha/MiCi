@@ -1,3 +1,5 @@
+#!/bin/sh
+
 javac -cp commons-cli-1.2.jar MiCi.java
 jar -cvfm mici.jar Manifest.txt MiCi.class commons-cli-1.2.jar
 DIR=mici-`cat VERSION`
@@ -5,3 +7,4 @@ mkdir $DIR
 mv mici.jar $DIR
 cp run_mici* $DIR
 zip -r $DIR.zip $DIR
+rm -Rf $DIR
