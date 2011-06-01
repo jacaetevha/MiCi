@@ -34,11 +34,11 @@ public class MiCi {
 		Options options = new Options();
 		options.addOption(OptionBuilder.withLongOpt("help").withDescription("print this message").create('h'));
 		options.addOption(OptionBuilder.withLongOpt("verbose").withDescription("output mouse movement and keyboard interaction messages").create('v'));
-		options.addOption(OptionBuilder.withLongOpt("quiet").withDescription("don't output any messages").create('q'));
-		options.addOption(OptionBuilder.withLongOpt("reset-mouse").withDescription("reset mouse position after moving it to 0,0").create('r'));
+		options.addOption(OptionBuilder.withLongOpt("quiet").withDescription("don't output any messages (default)").create('q'));
+		options.addOption(OptionBuilder.withLongOpt("reset-mouse").withDescription("reset mouse position after moving it to 0,0 (default is off)").create('r'));
 		options.addOption(OptionBuilder.withArgName("integer")
 			.hasArg()
-			.withDescription("number of seconds to sleep before moving the mouse again")
+			.withDescription("number of seconds to sleep before moving the mouse again (default is 600)")
 			.withLongOpt("sleep-time")
 			.create('s'));
 		return options;
