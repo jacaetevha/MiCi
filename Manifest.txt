@@ -1,0 +1,2 @@
+Main-Class: MiCi
+Class-Path: commons-cli-1.2.jar
