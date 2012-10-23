@@ -20,6 +20,8 @@ or, on Windows:
 
     run_mici.bat -h
 
+You can download the latest MiCi from the [Downloads](https://github.com/jacaetevha/MiCi/downloads) page, or build it yourself (see below).
+
 Building
 ========
 
