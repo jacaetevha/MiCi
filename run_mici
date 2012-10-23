@@ -1,2 +1,19 @@
-jar -xf mici.jar commons-cli-1.2.jar
-java -jar mici.jar $1 $2 $3 $4 $5 $6 $7 $8 $9
+#!/bin/bash
+
+SOURCE="${BASH_SOURCE[0]}"
+DIR="$( dirname "$SOURCE" )"
+while [ -h "$SOURCE" ]
+do 
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+  DIR="$( cd -P "$( dirname "$SOURCE"  )" && pwd )"
+done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+if [ ! -f $DIR/mici-1.0/commons-cli-1.2.jar ]
+then
+  jar -xf $DIR/mici.jar commons-cli-1.2.jar
+  mv commons-cli-1.2.jar $DIR
+fi
+CLASSPATH=$DIR:$DIR/commons-cli-1.2.jar
+java -jar $DIR/mici.jar $1 $2 $3 $4 $5 $6 $7 $8 $9
